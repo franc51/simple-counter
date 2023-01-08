@@ -1,16 +1,18 @@
 let btn1 = document.getElementsByClassName("btn1");
 let btn2 = document.getElementsByClassName("btn2");
-let val = document.getElementById("val");
-console.log(val.innerHTML);
+let val = 0;
 
 function increment() {
-  val.innerHTML++;
+  val++;
   console.log(val);
+  document.getElementById("val").innerHTML = val;
 }
 btn1[0].addEventListener("click", increment);
 
 function decrement() {
-  val.innerHTML--;
+  val--;
+  console.log(val);
+  document.getElementById("val").innerHTML = val;
 }
 btn2[0].addEventListener("click", decrement);
 
@@ -31,6 +33,13 @@ function displayPopup() {
   overlay.style.display = "block";
 }
 
+let onion = document.getElementById("onion");
+
+let buy = document.getElementById("val").innerHTML;
+onion.innerHTML = buy;
+console.log(buy);
+
+// dark mode
 let darkmode = document.getElementById("dark");
 var body = document.getElementsByTagName("BODY")[0];
 var title = document.getElementById("title");
